@@ -6,8 +6,36 @@
     app:startDestination="@id/loginFragment">
 
     <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.udacity.shoestore.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionFragment"
+            app:destination="@id/instructionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeFragment"
+        android:name="com.udacity.shoestore.ShoeFragment"
+        android:label="fragment_shoe"
+        tools:layout="@layout/fragment_shoe" />
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="com.udacity.shoestore.InstructionFragment"
+        android:label="fragment_instruction"
+        tools:layout="@layout/fragment_instruction" >
+        <action
+            android:id="@+id/action_instructionFragment_to_shoeFragment"
+            app:destination="@id/shoeFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/loginFragment"
-        android:name="com.udacity.shoestore.ui.login.LoginFragment"
+        android:name="com.udacity.shoestore.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login"
+        app:startDestination="@id/action_loginFragment_to_welcomeFragment">
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
 </navigation>

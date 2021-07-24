@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentInstructionBinding
 import com.udacity.shoestore.databinding.FragmentLoginBinding
@@ -16,11 +17,7 @@ import com.udacity.shoestore.databinding.FragmentLoginBinding
  * create an instance of this fragment.
  */
 class LoginFragment : Fragment() {
-    private var _binding: FragmentLoginBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,12 +29,15 @@ class LoginFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         // Inflate the layout for this fragment
-        _binding = FragmentInstructionBinding.inflate(
-            inflater, container, false
-        )
-        binding.signin_button.setOnClickListener {
+        val binding: FragmentLoginBinding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_login, container, false)
+        binding.signinButton.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
+        binding.signupButton.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+        }
+
         return binding.root
     }
 

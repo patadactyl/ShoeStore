@@ -7,10 +7,12 @@
             name="shoeViewModel"
             type="com.udacity.shoestore.models.ShoeViewModel" />
     </data>
+
     <ScrollView
         android:id="@+id/shoe_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorBackgroundDark"
         tools:context=".ShoeFragment">
 
         <TextView
@@ -18,6 +20,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
             android:text="@{shoeViewModel.shoe}"
-            tools:text="&quot;Air Force Ones&quot;"/>
+            tools:text="&quot;Air Force Ones&quot;" />
     </ScrollView>
 </layout>

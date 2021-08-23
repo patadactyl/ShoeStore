@@ -2,6 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="shoeViewModel"
+            type="com.udacity.shoestore.models.ShoeViewModel" />
+    </data>
     <ScrollView
         android:id="@+id/shoe_layout"
         android:layout_width="match_parent"
@@ -12,6 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
-            android:text="@string/large_text" />
+            android:text="@{shoeViewModel.shoe}"
+            tools:text="&quot;Air Force Ones&quot;"/>
     </ScrollView>
 </layout>

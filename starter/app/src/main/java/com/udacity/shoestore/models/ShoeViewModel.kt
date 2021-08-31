@@ -18,7 +18,7 @@ class ShoeViewModel: ViewModel() {
         resetList()
     }
 
-    private fun resetList() {
+    fun resetList() {
         shoeList = mutableListOf(
             "queen",
             "hospital",
@@ -44,5 +44,6 @@ class ShoeViewModel: ViewModel() {
         )
         shoeList.shuffle()
     }
+
 }
 

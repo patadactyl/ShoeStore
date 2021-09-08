@@ -24,6 +24,10 @@ class ShoeFragment : Fragment() {
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoe, container, false)
 
+        binding.addShoeButton.setOnClickListener {
+            findNavController().navigate(ShoeFragmentDirections.actionShoeFragmentToDetailFragment())
+        }
+
         viewModel = ViewModelProvider(this).get(ShoeViewModel::class.java)
         binding.shoeViewModel = viewModel
 

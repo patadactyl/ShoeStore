@@ -3,6 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="welcomeFragment"
+            type="com.udacity.shoestore.WelcomeFragment" />
+    </data>
+
     <LinearLayout
         android:id="@+id/welcome_layout"
         android:layout_width="match_parent"

@@ -41,10 +41,17 @@
         <action
             android:id="@+id/action_shoeFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_shoeFragment_to_instructionFragment"
+            app:destination="@id/instructionFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.udacity.shoestore.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_shoeFragment"
+            app:destination="@id/shoeFragment" />
+    </fragment>
 </navigation>

@@ -10,14 +10,32 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorBackgroundDark"
+
         tools:context=".DetailFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorBackgroundDark"
-            android:text="@string/large_text" />
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackgroundDark"
+                android:textColor="@color/white"
+                android:text="@string/large_text" />
+
+            <Button
+                android:id="@+id/enter_details_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/layout_margin"
+                android:layout_marginRight="@dimen/layout_margin"
+                android:background="@color/colorAccent"
+                android:text="@string/enter" />
+        </LinearLayout>
 
     </ScrollView>
 
